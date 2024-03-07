@@ -210,6 +210,14 @@ python3 setup.py -c configs/config-wlan-ap.yml && cd wlan-ap/openwrt
 ```
 make V=s -j5
 ```
+PS：5.4版内核用这个
+git clone https://github.com/gl-inet/gl-infra-builder.git
+cd gl-infra-builder
+python3 setup.py -c configs/config-wlan-ap-5.4.yml
+cd wlan-ap/openwrt
+./scripts/gen_config.py target_wlan_ap-gl-ax1800-5-4 luci
+make -j17
+```
 3.2 Compile AXT1800 GL.iNet standard firmware(Base on the steps above)
 ```
 git clone https://github.com/gl-inet/glinet4.x.git
