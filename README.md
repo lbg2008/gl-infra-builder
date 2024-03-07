@@ -212,13 +212,11 @@ make V=s -j5
 ```
 PS：5.4版内核用这个
 ```
-git clone https://github.com/gl-inet/gl-infra-builder.git
+git clone https://github.com/gl-inet/gl-infra-builder.git && cd gl-infra-builder
 ```
-cd gl-infra-builder
 ```
-python3 setup.py -c configs/config-wlan-ap-5.4.yml
+python3 setup.py -c configs/config-wlan-ap-5.4.yml && cd wlan-ap/openwrt
 ```
-cd wlan-ap/openwrt
 ```
 ./scripts/gen_config.py target_wlan_ap-gl-ax1800-5-4 luci
 ```
